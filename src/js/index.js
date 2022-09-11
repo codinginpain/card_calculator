@@ -171,6 +171,8 @@ const calcBtn = () => {
 
     let resultStr = "";
     let j = 0;
+    let k = 0;
+    
     if(winnerLen > loserLen) {
         //case1 winner의 수가 많을 때
         console.log("case1 starts");
@@ -215,16 +217,20 @@ const calcBtn = () => {
         console.log("case3 starts");
         //case3 winner와 loser의 수가 같음
         for(let i=0; i<winnerLen; i++) {
-            while(winnerValArr[i] > 0) {
-                if(winnerValArr[i] <= loserValArr[i+j]) {
-                    resultStr += `${loserArr[i+j]}가 ${winnerArr[i]}에게 ${winnerValArr[i]}원을 이체 하세요./`;
-                    loserValArr[i+j] = loserValArr[i+j] - winnerValArr[i];
+            j = 0;
+            k = 0;
+            while(winnerValArr[i] > 0 || loserValArr[i] > 0) {
+                if(winnerValArr[i+k] <= loserValArr[i+j]) {
+                    resultStr += `${loserArr[i+j]}가 ${winnerArr[i+k]}에게 ${winnerValArr[i+k]}원을 이체 하세요./`;
+                    loserValArr[i+j] = loserValArr[i+j] - winnerValArr[i+k];
                     winnerValArr[i] = 0
+                    k++;
                 }else {
-                    winnerValArr[i] = winnerValArr[i] - (loserValArr[i+j]);
-                    resultStr += `${loserArr[i]}가 ${winnerArr[i]}에게 ${loserValArr[i]}원을 이체 하세요./`;
+                    resultStr += `${loserArr[i+j]}가 ${winnerArr[i+k]}에게 ${loserValArr[i+j]}원을 이체 하세요./`;
+                    winnerValArr[i+k] = winnerValArr[i+k] - (loserValArr[i+j]);
+                    loserValArr[i+j] = 0;
+                    j++;   
                 }
-                j++;
             }
         }
     }
