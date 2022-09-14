@@ -1,6 +1,8 @@
 
 let doc = document;
 
+
+
 const addEvent = () => {
     doc.getElementById("init_btn").addEventListener("click", () => {window.location.reload()})
 }
@@ -235,14 +237,12 @@ const calcBtn = () => {
         }
     }
     console.log(resultStr);
-    //slash로 배열나눈다으머 span으로 생성해서 div 안에 넣어줌
     let resultSpan = "";
     let resultSentence = resultStr.split("/");
     resultSentence.forEach((result) => {
         resultSpan += `<div><span>${result}</span></div>`;
     });
     doc.getElementById("transfer_prediction").innerHTML = resultSpan
-    // <span><span>영수</span>가 <span>원식</span>에게 <span>10000</span>원 주세요</span>
 }
 
     
