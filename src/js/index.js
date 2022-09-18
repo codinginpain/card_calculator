@@ -54,8 +54,8 @@ const makeTodayBet = (playerSet) => {
                             <button onclick="addBet(${index}, 100000)"><span>100000</span></button>
                             <button onclick="addBet(${index}, 150000)"><span>150000</span></button>
                             <button onclick="addBet(${index}, 200000)"><span>200000</span></button>
-                            <button onclick="initBet(${index})"><span>초기화(기능 준비중..)</span></button>
                         </div>`;
+                        // <button onclick="initBet(${index})"><span>초기화(기능 준비중..)</span></button>
         index ++;
     }
     doc.getElementById("player_bet").innerHTML = playerBetHtml;
@@ -68,7 +68,7 @@ const makeTodayStake = (playerSet) => {
     for(const player of playerSet) {
         stakeHtml += `<div>
                         <span>${player}</span>
-                        <span id="stake${index}" class="stake" data-player="${player}">50000</span>
+                        <span id="stake${index}" class="stake" data-player="${player}">0</span>
                         <span>원</span>
                       </div>`;
         index ++;              
@@ -93,9 +93,9 @@ const makeBalance = () => {
 
 const addBet = (playerIndex, addMoney) => {
     let stakeId = "stake"+playerIndex;
-    let currentStake = Number(doc.getElementById(stakeId).innerHTML);
-    let addedStake = currentStake + Number(addMoney);
-    doc.getElementById(stakeId).innerHTML = addedStake;
+    // let currentStake = Number(doc.getElementById(stakeId).innerHTML);
+    // let addedStake = currentStake + Number(addMoney);
+    doc.getElementById(stakeId).innerHTML = addMoney;
     calculateStake();
     
 }
@@ -156,8 +156,6 @@ const calcBtn = () => {
 
     const sortedWinnerMap = new Map([...winnerMap.entries()].sort((a,b) => b[1] - a[1]));
     const sortedLoserMap = new Map([...loserMap.entries()].sort((a,b) => b[1] - a[1]));
-    console.log(sortedWinnerMap);
-    console.log(sortedLoserMap);
 
     const winnerArr = Array.from(sortedWinnerMap.keys());
     const loserArr = Array.from(sortedLoserMap.keys());
@@ -245,14 +243,6 @@ const calcBtn = () => {
     doc.getElementById("transfer_prediction").innerHTML = resultSpan
 }
 
-    
-
-    
-
-
-
-
-
 const leftBalance = () => {
     let stakeList = doc.getElementsByClassName("stake");
     let balanceList = doc.getElementsByClassName("balance_input");
@@ -265,7 +255,6 @@ const leftBalance = () => {
     let leftBalanceValue = amountStake - amountBalance;
     doc.getElementById("left_balance").innerHTML = leftBalanceValue;
 }
-
 
 
 doc.getElementById("calcBtn").addEventListener("click", calcBtn);
