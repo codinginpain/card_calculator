@@ -28,33 +28,40 @@ init();
 const playerSet = new Set();
 const addPlayer = (playerName) => {
     playerSet.add(playerName);
-    makeTodayPlayers(playerSet);
+    // makeTodayPlayers(playerSet);
     makeTodayBet(playerSet);
     makeTodayStake(playerSet);
     makeBalance(playerSet);
     calculateStake();
 }
 
-const makeTodayPlayers = (playerSet) => {
+// const makeTodayPlayers = (playerSet) => {
 
-    let todayPlayersHtml = "";
-    for(let player of playerSet) {
-        todayPlayersHtml += `<button>${player} <span>x</span></button>`;
-    }
-    doc.getElementById("today_players").innerHTML = todayPlayersHtml;
+//     let todayPlayersHtml = "";
+//     for(let player of playerSet) {
+//         todayPlayersHtml += `<button>${player} <span>x</span></button>`;
+//     }
+//     doc.getElementById("today_players").innerHTML = todayPlayersHtml;
+// }
+
+const removePlayer = (divTag) => {
+    
+    divTag.remove();
 }
 
 const makeTodayBet = (playerSet) => {
     let playerBetHtml = "";
     let index = 0;
     for(const player of playerSet) {
-        playerBetHtml += `<div>
+        playerBetHtml += `<div id='${player}'>
                             <span>${player}</span> 
                             <button onclick="addBet(${index}, 50000)"><span>50000</span></button>
                             <button onclick="addBet(${index}, 100000)"><span>100000</span></button>
                             <button onclick="addBet(${index}, 150000)"><span>150000</span></button>
                             <button onclick="addBet(${index}, 200000)"><span>200000</span></button>
+                            <button onclick="removePlayer(${player})"><span>x</span></button>
                         </div>`;
+                        // <button onclick="removePlayer(${index}, 200000)"><span>x</span></button>
                         // <button onclick="initBet(${index})"><span>초기화(기능 준비중..)</span></button>
         index ++;
     }
