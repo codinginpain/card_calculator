@@ -70,30 +70,36 @@
     <div style="float: right;">
       2023 게임 정산기록
       <div>
-        <table width="150px">
+        <table width="160">
           <tr>
-            <td>player</td>
-            <td>스코어</td>
-          </tr>
-          <tr class="minus">
-            <td>정기</td>
-            <td>-54000</td>
-          </tr>
-          <tr class="minus">
-            <td>영수</td>
-            <td>-80000</td>
+            <td>Players</td>
+            <td>Games</td>
+            <td class="text-center">Score</td>
           </tr>
           <tr class="plus">
             <td>광호</td>
-            <td>158000</td>
+            <td class="text-center most-games">2</td>
+            <td class="text-right">158000</td>
           </tr>
           <tr  class="plus">
             <td>형성</td>
-            <td>80000</td>
+            <td class="text-center">1</td>
+            <td class="text-right">80000</td>
+          </tr>
+          <tr class="minus">
+            <td>정기</td>
+            <td class="text-center">1</td>
+            <td class="text-right">-54000</td>
+          </tr>
+          <tr class="minus">
+            <td>영수</td>
+            <td class="text-center">2</td>
+            <td class="text-right">-80000</td>
           </tr>
           <tr class="minus">
             <td>원식</td>
-            <td>-104000</td>
+            <td class="text-center">2</td>
+            <td class="text-right">-104000</td>
           </tr>
         </table>
       </div>
@@ -152,6 +158,25 @@ table, td{
 }
 .minus {
   background-color: #ED544A;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+
+.most-games {
+  background-color: #617df8;
+}
+
+.least-games {
+  background-color: #dfe567;
+}
+
+.none-color {
+  background-color: white;
 }
 
 </style>

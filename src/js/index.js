@@ -91,7 +91,7 @@ const makeBalance = () => {
     for(const player of playerSet) {
         balanceHtml += `<div>
                           <span>${player}</span>
-                          <span><input type="text" class="balance_input" onkeyup="leftBalance()"></span>
+                          <span><input type="text" style='width: 70px' class="balance_input" onkeyup="leftBalance()"></span>
                         </div>`;
         index ++;              
     }
