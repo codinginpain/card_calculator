@@ -7,172 +7,153 @@
     <title>Document</title>
 </head>
 <body>
-    <button id="init_btn">새로고침</button>
-    <div id="board">
+  <button id="init_btn">새로고침</button>
+  <div id="board">
 
+    <div>
+      <div class="players" style="display: inline-block">
         <div>
-        <div class="players">
-          <div>
-            <span>참여자를 선택 해 주세요</span>
-          </div>
-          <div>
-            <span id="players">
-                <!-- 전체 참여자 명단 생성 -->
-            </span>
-          </div>
-        </div> 
+          <span>참여자를 선택 해 주세요</span>
         </div>
-
-        <br>
-
         <div>
-          <div class="today_player">
-          <div>
-            <span>오늘 참여한 사람</span>
-          </div>
-          <div>
-            <span id="today_players">
-              <!-- <button>정기 <span>x</span></button>
-              <button>영수 <span>x</span></button>
-              <button>광호 <span>x</span></button>
-              <button>원식 <span>x</span></button>
-              <button>형성 <span>x</span></button> -->
-            </span>  
-          </div>  
-          
-          </div>
+          <span id="players">
+              <!-- 전체 참여자 명단 생성 -->
+          </span>
         </div>
-
-        <br>
-
-        <div>
-            <div id="player_bet">
-                <!-- <div class="player_bet">
-                    <span>정기</span> 
-                    <button><span>50000</span></button>
-                    <button><span>100000</span></button>
-                    <button><span>150000</span></button>
-                    <button><span>200000</span></button>
-                </div>
-                <div class="player_bet">
-                    <span>영수</span> 
-                    <button><span>50000</span></button>
-                    <button><span>100000</span></button>
-                    <button><span>150000</span></button>
-                    <button><span>200000</span></button>
-                </div>
-                <div class="player_bet">
-                    <span>광호</span> 
-                    <button><span>50000</span></button>
-                    <button><span>100000</span></button>
-                    <button><span>150000</span></button>
-                    <button><span>200000</span></button>
-                </div>
-                <div class="player_bet">
-                    <span>원식</span> 
-                    <button><span>50000</span></button>
-                    <button><span>100000</span></button>
-                    <button><span>150000</span></button>
-                    <button><span>200000</span></button>
-                </div>
-                <div class="player_bet">
-                    <span>형성</span> 
-                    <button><span>50000</span></button>
-                    <button><span>100000</span></button>
-                    <button><span>150000</span></button>
-                    <button><span>200000</span></button>
-                </div> -->
-            </div>
-        </div>
-
-        <br>
-
-        <div>시작 판돈</div>
-        <div id="player_stake">
-            <!-- <div>
-                <span>정기</span>
-                <span>50000</span>
-                <span>원</span>
-            </div>
-            <div>
-                <span>영수</span>
-                <span>50000</span>
-                <span>원</span>
-            </div>
-            <div>
-                <span>광호</span>
-                <span>50000</span>
-                <span>원</span>
-            </div>
-            <div>
-                <span>원식</span>
-                <span>50000</span>
-                <span>원</span>
-            </div>
-            <div>
-                <span>형성</span>
-                <span>50000</span>
-                <span>원</span>
-            </div> -->
-        </div>
-
-        <br>
-        <div class="stake_sum">
-            <span>총 판돈</span>
-            <span id="stakeSum">0 원</span>
-        </div>
-        <br>
-
-        <div>현재 잔액</div>
-        <div id="player_balance">
-            <!-- <div>
-                <span>정기</span>
-                <span><input type="text"></span>
-            </div>
-            <div>
-                <span>영수</span>
-                <span><input type="text"></span>
-            </div>
-            <div>
-                <span>광호</span>
-                <span><input type="text"></span>
-            </div>
-            <div>
-                <span>원식</span>
-                <span><input type="text"></span>
-            </div>
-            <div>
-                <span>형성</span>
-                <span><input type="text"></span>
-            </div> -->
-        </div>
-        <div style="color:red">
-            *남은 금액은 <span id="left_balance">0</span>원 입니다.
-        </div>
-
-        <br>
-
-        <div>
-            <button id="calcBtn">계산하기</button>
-        </div>
-
-        <br>
-        <div>
-            게임 현황 판
-        </div>
-        <div id="result">
-            
-        </div>
-        <br>
-        <div id="transfer_prediction">
-            <!-- <div id="transfer_prediction_div"> -->
-                <!-- <span><span>영수</span>가 <span>원식</span>에게 <span>10000</span>원 주세요</span> -->
-            <!-- </div> -->
-
-        </div>
-
-
       </div>
-      <script src="src/js/index.js"></script>
+      <div style="float: right;">
+        2023 게임 정산기록
+        <div>
+          <table width="150px">
+            <tr>
+              <td>player</td>
+              <td>스코어</td>
+            </tr>
+            <tr class="minus">
+              <td>정기</td>
+              <td>-54000</td>
+            </tr>
+            <tr class="minus">
+              <td>영수</td>
+              <td>-80000</td>
+            </tr>
+            <tr class="plus">
+              <td>광호</td>
+              <td>158000</td>
+            </tr>
+            <tr  class="plus">
+              <td>형성</td>
+              <td>80000</td>
+            </tr>
+            <tr class="minus">
+              <td>원식</td>
+              <td>-104000</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div>
+      <div class="today_player">
+      <div>
+        <span>오늘 참여한 사람</span>
+      </div>
+      <div>
+        <span id="today_players">
+          <!-- <button>정기 <span>x</span></button>
+          <button>영수 <span>x</span></button>
+          <button>광호 <span>x</span></button>
+          <button>원식 <span>x</span></button>
+          <button>형성 <span>x</span></button> -->
+        </span>  
+      </div>  
+      
+      </div>
+    </div>
+
+    <br>
+
+    <div>
+      <div id="player_bet">
+          <!-- <div class="player_bet">
+              <span>정기</span> 
+              <button><span>50000</span></button>
+              <button><span>100000</span></button>
+              <button><span>150000</span></button>
+              <button><span>200000</span></button>
+          </div> -->
+      </div>
+    </div>
+
+    <br>
+
+    <div>시작 판돈</div>
+    <div id="player_stake">
+        <!-- <div>
+            <span>정기</span>
+            <span>50000</span>
+            <span>원</span>
+        </div> -->
+    </div>
+
+    <br>
+    <div class="stake_sum">
+      <span>총 판돈</span>
+      <span id="stakeSum">0 원</span>
+    </div>
+    <br>
+
+    <div>현재 잔액</div>
+    <div id="player_balance">
+        <!-- <div>
+            <span>정기</span>
+            <span><input type="text"></span>
+        </div> -->
+    </div>
+    <div style="color:red">
+      *남은 금액은 <span id="left_balance">0</span>원 입니다.
+    </div>
+
+    <br>
+
+    <div>
+      <button id="calcBtn">계산하기</button>
+    </div>
+
+    <br>
+    <div>
+      게임 현황 판
+    </div>
+    <div id="result">
+        
+    </div>
+    <br>
+    <div id="transfer_prediction">
+        <!-- <div id="transfer_prediction_div"> -->
+            <!-- <span><span>영수</span>가 <span>원식</span>에게 <span>10000</span>원 주세요</span> -->
+        <!-- </div> -->
+
+    </div>
+
+
+  </div>
+<script src="src/js/index.js"></script>
+<style>
+table, td{
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.plus {
+  background-color: #3FE87F;
+}
+.minus {
+  background-color: #ED544A;
+}
+
+</style>
 </body>
 </html>
