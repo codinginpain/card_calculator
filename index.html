@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
+
 <body>
   <button id="init_btn">새로고침</button>
   <div id="board">
@@ -17,7 +19,7 @@
         </div>
         <div>
           <span id="players">
-              <!-- 전체 참여자 명단 생성 -->
+            <!-- 전체 참여자 명단 생성 -->
           </span>
         </div>
       </div>
@@ -27,19 +29,19 @@
 
     <div>
       <div class="today_player">
-      <div>
-        <span>오늘 참여한 사람</span>
-      </div>
-      <div>
-        <span id="today_players">
-          <!-- <button>정기 <span>x</span></button>
+        <div>
+          <span>오늘 참여한 사람</span>
+        </div>
+        <div>
+          <span id="today_players">
+            <!-- <button>정기 <span>x</span></button>
           <button>영수 <span>x</span></button>
           <button>광호 <span>x</span></button>
           <button>원식 <span>x</span></button>
           <button>형성 <span>x</span></button> -->
-        </span>  
-      </div>  
-      
+          </span>
+        </div>
+
       </div>
     </div>
 
@@ -47,7 +49,7 @@
 
     <div>
       <div id="player_bet">
-          <!-- <div class="player_bet">
+        <!-- <div class="player_bet">
               <span>정기</span> 
               <button><span>50000</span></button>
               <button><span>100000</span></button>
@@ -61,7 +63,7 @@
 
     <div>시작 판돈</div>
     <div id="player_stake" style="display: inline-block">
-        <!-- <div>
+      <!-- <div>
             <span>정기</span>
             <span>50000</span>
             <span>원</span>
@@ -81,7 +83,7 @@
             <td class="text-center most-games">3</td>
             <td class="text-right">110500</td>
           </tr>
-          <tr  class="plus">
+          <tr class="plus">
             <td>형성</td>
             <td class="text-center">2</td>
             <td class="text-right">44700</td>
@@ -92,14 +94,14 @@
             <td class="text-right">2700</td>
           </tr>
           <tr class="minus">
-            <td>영수</td>
-            <td class="text-center">3</td>
-            <td class="text-right">-75300</td>
-          </tr>
-          <tr class="minus">
             <td>원식</td>
             <td class="text-center">3</td>
             <td class="text-right">-58600</td>
+          </tr>
+          <tr class="minus">
+            <td>영수</td>
+            <td class="text-center">3</td>
+            <td class="text-right">-75300</td>
           </tr>
         </table>
       </div>
@@ -114,7 +116,7 @@
 
     <div>현재 잔액</div>
     <div id="player_balance">
-        <!-- <div>
+      <!-- <div>
             <span>정기</span>
             <span><input type="text"></span>
         </div> -->
@@ -134,51 +136,54 @@
       게임 현황 판
     </div>
     <div id="result">
-        
+
     </div>
     <br>
     <div id="transfer_prediction">
-        <!-- <div id="transfer_prediction_div"> -->
-            <!-- <span><span>영수</span>가 <span>원식</span>에게 <span>10000</span>원 주세요</span> -->
-        <!-- </div> -->
+      <!-- <div id="transfer_prediction_div"> -->
+      <!-- <span><span>영수</span>가 <span>원식</span>에게 <span>10000</span>원 주세요</span> -->
+      <!-- </div> -->
 
     </div>
 
 
   </div>
-<script src="src/js/index.js"></script>
-<style>
-table, td{
-  border: 1px solid black;
-  border-collapse: collapse;
-}
+  <script src="src/js/index.js"></script>
+  <style>
+    table,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
 
-.plus {
-  background-color: #3FE87F;
-}
-.minus {
-  background-color: #ED544A;
-}
+    .plus {
+      background-color: #3FE87F;
+    }
 
-.text-center {
-  text-align: center;
-}
-.text-right {
-  text-align: right;
-}
+    .minus {
+      background-color: #ED544A;
+    }
 
-.most-games {
-  background-color: #617df8;
-}
+    .text-center {
+      text-align: center;
+    }
 
-.least-games {
-  background-color: #dfe567;
-}
+    .text-right {
+      text-align: right;
+    }
 
-.none-color {
-  background-color: white;
-}
+    .most-games {
+      background-color: #617df8;
+    }
 
-</style>
+    .least-games {
+      background-color: #dfe567;
+    }
+
+    .none-color {
+      background-color: white;
+    }
+  </style>
 </body>
+
 </html>
